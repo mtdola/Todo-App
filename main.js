@@ -11,17 +11,22 @@ function addListItem() {
 		li.appendChild(document.createTextNode(input.value));
 		ul.appendChild(li);
 		input.value = "";
-		console.log("Clicked!!");
 }
 
-btn.addEventListener("click", function (){
+function clickEnter() {
 	if (inputLength() > 0) {
 		addListItem();
+		console.log("Clicked!!");
 	}
-});
+}
 
-input.addEventListener("keypress", function(event) {
-	if (inputLength() > 0 && event.keycode === 13) {
+function pressEnter(event) {
+	if (inputLength() > 0 && event.keyCode === 13) {
 		addListItem();
+		console.log("Pressed Enter");
 	}
-})
+}
+
+btn.addEventListener("click", clickEnter);
+
+input.addEventListener("keypress", pressEnter);
