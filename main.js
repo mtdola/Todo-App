@@ -1,5 +1,5 @@
 var input = document.querySelector("input");
-var btn = document.querySelector("button");
+var btn = document.querySelector("img");
 var ul = document.querySelector("ul");
 
 function inputLength() {
